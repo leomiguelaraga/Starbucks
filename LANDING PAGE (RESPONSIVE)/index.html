@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content="width=device-width, initial-scale=1.0">
+	<title>Starbucks</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="logo.png">
+</head>
+
+<body>
+
+	<section>
+		<div class="circle"></div>
+		<header>
+			<a href="index.html"><img src="logo.png"  class="logo"></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li><a href="https://www.facebook.com/">Home</a></li>
+				<li><a href="https://www.youtube.com/watch?v=WnV6t-Oxh30">Menu</a></li>
+				<li><a href="index.html">What's New?</a></li>
+				<li><a href="index.html">Contact</a></li>
+			</ul>	
+		</header>
+
+		<div class="content">
+			<div class="textBox">
+				<h2> It's not just Coffee<br>It's <span>Starbucks</span></h2>
+				<p>Your source for the latest news from Starbucks. Learn about what is happening in our stores and company--from beverage and food announcements to financial news, partner (employee) and customer experience updates. Follow us on Twitter @StarbucksNews.
+					</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="imgBox">
+			<img src="img1.png" class="starbucks">
+			</div>	
+		</div>
+	
+		<ul class="thumb">
+			<li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></li>
+			<li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></li>
+			<li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></li>
+		</ul>
+
+		<ul class="sci">
+			<li><a href=index.html><img src="facebook.png"></a></li>
+			<li><a href=index.html><img src="twitter.png"></a></li>
+			<li><a href=index.html><img src="instagram.png"></a></li>
+		</ul>
+		
+	</section>		
+
+	<script type="text/javascript">
+		function imgSlider(slide) {
+			document.querySelector('.starbucks').src = slide;
+		}
+
+		function changeCircleColor(color) {
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+		}
+
+		function toggleMenu() {
+			var menuToggle = document.querySelector('.toggle');
+			var navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')		}
+	</script>
+</body>
+
+</html>
